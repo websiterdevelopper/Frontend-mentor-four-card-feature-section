@@ -1,0 +1,132 @@
+/* Variables */
+:root {
+  --card-1-border: hsl(0, 78%, 62%);
+  --card-2-border: hsl(180, 62%, 55%);
+  --card-3-border: hsl(34, 97%, 64%);
+  --card-4-border: hsl(212, 86%, 64%);
+  --heading-color: hsl(234, 12%, 34%);
+  --paragraph-color: hsl(229, 6%, 66%);
+  --body-bg: hsl(0, 0%, 98%);
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--body-bg);
+  min-height: 100vh;
+  font-size: 15px;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: var(--paragraph-color);
+  line-height: 1.6;
+}
+
+h1,
+h3 {
+  color: var(--heading-color);
+}
+
+/* Main */
+
+.box .title {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.box h1 {
+  font-weight: normal;
+}
+
+.box h1 span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.box .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0 2.5rem;
+  gap: 20px;
+}
+
+.box .cards .row {
+  width: calc(100% / 3);
+}
+
+.box .cards .card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border-top: 4px solid;
+  box-shadow: 0 0 10px rgba(96, 91, 91, 0.3);
+}
+
+.box .cards .card.supervisor {
+  border-color: var(--card-2-border);
+}
+
+.box .cards .card.team {
+  border-color: var(--card-1-border);
+  margin-bottom: 20px;
+}
+
+.box .cards .card.karma {
+  border-color: var(--card-3-border);
+}
+
+.box .cards .card.calc {
+  border-color: var(--card-4-border);
+}
+
+.box .cards .card {
+  text-align: right;
+}
+
+.box .cards .card h3 {
+  font-size: 1.25rem;
+}
+
+.box .cards .card p {
+  margin: 1rem 0 1.25rem;
+}
+
+.box .cards .card h3,
+.box .cards .card p {
+  text-align: left;
+}
+
+.box .cards .card img {
+  display: block;
+}
+
+@media (max-width: 801px) {
+  .box .cards {
+    flex-direction: column;
+  }
+
+  .box .cards .row {
+    width: 100%;
+  }
+}
+
+@media (max-width: 691px) {
+  .box .title {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
